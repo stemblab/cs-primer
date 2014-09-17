@@ -2,7 +2,7 @@ resources
 
 out1 = 'Aw-1.txt';
 delete(out1);diary(out1);
-disp(acc_dump_matrix(3,12,1))
+disp(acc_dump_matrix(3,12,1)) % .$W_1$.
 diary off
 
 out2 = 'Aw-2.txt';

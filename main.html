@@ -474,22 +474,26 @@
   </div>
 
  <div data-file="./octave/nus.m" 
-      data-start-match="\\initialize \$x\$\\"
-      data-end-match="\\\$K\$ values\\">
+      data-start-match="\%\s\.initialize \$x\$\."
+      data-end-match="\%\s\.\$K\$ values\.">
  </div>
 
   The COB matrix, $A^\ell$ is an inverse DFT matrix with $N$ rows and
   columns.  The Nyquist-rate samples are $b^\ell=A^\ell x$:
 
- <div data-file="./octave/nus.m" data-start-match="N=128"
-      data-end-match="K=5"></div>
+ <div data-file="./octave/nus.m" 
+      data-start-match="\%\s\.COB/iDFT\."
+      data-end-match="\%\s\.Nyquist samples\.">
+ </div>
 
   For CS we now compress $b^\ell$ by randomly selecting $M$ of its
   rows, and, for reconstruction later, we form matrix $A$ from the
   corresponding rows of $A^\ell$:
 
- <div data-file="./octave/nus.m" data-start-match="N=128"
-      data-end-match="K=5"></div>
+ <div data-file="./octave/nus.m" 
+      data-start-match=".\.randomly select \$M\$ rows\."
+      data-end-match="\.\$A\^\\ell \\rightarrow A\$\."> 
+ </div>
 
   The plot below shows the Nyquist rate samples (dots) and the
   randomly selected compressed samples (circles).
@@ -499,6 +503,12 @@
   Finally, given the $M$ samples of $b$, we are left to solve $Ax=b$
   to recover the original signal (i.e., sparsity coordinates $x$).  We
   use the [?id=b007h,Iteratively Reweighted Least Squares] method:
+
+ <div data-file="./octave/nus.m" 
+      data-start-match="\.solve \$Ax=b\$ with IRLS\."
+      data-end-match="\.solve \$Ax=b\$ with IRLS\.">
+ </div>
+
 
   The plot below shows the original and recovered sparsity coordinates
   on the perimeter of a unit circle (recall the original tone
@@ -537,7 +547,7 @@
     </span>
   </div>
 
-  <img src="rd.png">
+  "rd.png"
 
   Consider a signal, $s(t)$, periodic on a 
   <span class="pz_text" ref="one_sec_note">one second</span>
@@ -655,13 +665,15 @@
   For example, say $b^\ell$ is consists of 12 samples, each equal to
   unity.  After multiplying with $A^p$ we find:
 
+ <div data-file="./octave/Ap.m" 
+      data-start-match="\.\$b\^\\ell\$\."
+      data-end-match="\.\$A\^p\$\.">
+ </div>
+
   <div class="pz_note" id="pn_note">
     However, in a CDMA system the signal is "spread" by the __same__
     PN code at the transmitter.
   </div>
-
-  <div data-file="./octave/Ap.m" data-start-match="resources"
-       data-end-match="diary off"</div>
 
   Steps 3, 4 and 5 are equivalent to applying a COB $A^w$---which is
   easiest to illustrate via example. Say $R=4$, and the Walsh codes
@@ -670,6 +682,13 @@
 
   In matrix terms, consider now the the all-ones Walsh code $W_1$ of
   length 4, cyclically repeated in a matrix:
+
+  <div data-file="./octave/Aw.m" 
+      data-start-match="\.\$W_1\$\."
+      data-end-match="\.\$W_1\$\.">
+  </div>
+
+  <pre id="Aw-1"></pre> 
 
   When multiplying a signal by this matrix, the first row sums the
   first four sample values of the signal. The second and third rows
