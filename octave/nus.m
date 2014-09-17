@@ -1,9 +1,10 @@
 resources
 
-% $Ax=b$ dimensions
+% $Ax=b$ dimensions...
 N = 128;  % columns in $A$
 M = 32;   % rows in $A$
-K = 5;    % nonzero elements of $x$
+K = 5;    % nonzero elements of $x$ %.
+%%%%%
 
 x = zeros(N,1); % .initialize $x$.
 x(randperm(N,K)) = 1*exp(j*2*pi*rand(1,K)); % .$K$ values. have random phase

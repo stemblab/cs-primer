@@ -197,7 +197,9 @@
   $A$ by deleting each row of $A^\ell$ in turn:
 
   <div data-file="./octave/uniform_sampling.m"
-  data-start-match="spark_del_1" data-end-match="spark_del_3"></div>
+       data-start-match="\$A\^\\ell\$\.\." 
+       data-end-match="\.\$\\spark\{1\&-1\&1\\\\1\&0\&0\}\$\.">
+  </div>
 
   <pre id="uniform-sampling-1"></pre> 
 
@@ -230,8 +232,9 @@
   check by checking the spark:
 
   <div data-file="./octave/uniform_sampling.m"
-       data-start-match="spark_del_1"
-       data-end-match="spark_del_3"></div>
+       data-start-match="\$\\theta\$\.\."
+       data-end-match="spark_del_3.*\%\.">
+  </div>
 
   <pre id="uniform-sampling-2"></pre> 
 
@@ -246,8 +249,9 @@
   consider $R$ above:
 
   <div data-file="./octave/uniform_sampling.m"
-       data-start-match="spark_del_1"
-       data-end-match="spark_del_3"></div>
+       data-start-match="\$R\$\.\."
+       data-end-match="\$R\$\.\.">
+  </div>
 
   <pre id="uniform-sampling-3"></pre> 
 
@@ -458,8 +462,10 @@
     power.
   </div>
 
- <div data-file="./octave/nus.m" data-start-match="N=128"
-      data-end-match="K=5"></div>
+ <div data-file="./octave/nus.m" 
+      data-start-match="\$Ax\=b\$ dimensions\.\.\."
+      data-end-match="K = 5\;.*\%\.">
+ </div>
 
   Thus, of $N=128$ possible complex tones our signal has only $K=5$
   that are non-zero.  Further, the signal will be compressed to 32
