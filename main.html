@@ -463,7 +463,7 @@
   </div>
 
  <div data-file="./octave/nus.m" 
-      data-start-match="\$Ax\=b\$ dimensions\.\.\."
+      data-start-match="\$Ax\=b\$ dimensions\.\."
       data-end-match="K = 5\;.*\%\.">
  </div>
 
@@ -480,16 +480,16 @@
   </div>
 
  <div data-file="./octave/nus.m" 
-      data-start-match="\%\s\.initialize \$x\$\."
-      data-end-match="\%\s\.\$K\$ values\.">
+      data-start-match="\%\sInitialize\s\$x\$\.\."
+      data-end-match="\%\.\s\$K\$">
  </div>
 
   The COB matrix, $A^\ell$ is an inverse DFT matrix with $N$ rows and
   columns.  The Nyquist-rate samples are $b^\ell=A^\ell x$:
 
  <div data-file="./octave/nus.m" 
-      data-start-match="\%\s\.COB/iDFT\."
-      data-end-match="\%\s\.Nyquist samples\.">
+      data-start-match="\%\.\sCOB/iDFT\s\$A\^\\ell\$"
+      data-end-match="\%\.\sNyquist\ssamples\s\$b\^\\ell\$">
  </div>
 
   For CS we now compress $b^\ell$ by randomly selecting $M$ of its
@@ -497,8 +497,8 @@
   corresponding rows of $A^\ell$:
 
  <div data-file="./octave/nus.m" 
-      data-start-match=".\.randomly select \$M\$ rows\."
-      data-end-match="\.\$A\^\\ell \\rightarrow A\$\."> 
+      data-start-match="\%\.\sRandomly\sselect\s\$M\$\srows\."
+      data-end-match="\%\.\sDiscard\srows\:\s\$A\^\\ell\s\\rightarrow\sA\$\."> 
  </div>
 
   The plot below shows the Nyquist rate samples (dots) and the
@@ -511,8 +511,8 @@
   use the [?id=b007h,Iteratively Reweighted Least Squares] method:
 
  <div data-file="./octave/nus.m" 
-      data-start-match="\.solve \$Ax=b\$ with IRLS\."
-      data-end-match="\.solve \$Ax=b\$ with IRLS\.">
+      data-start-match="\%\.\sSolve\s\$Ax\=b\$\swith\sIRLS\."
+      data-end-match="\%\.\sSolve\s\$Ax\=b\$\swith\sIRLS\.">
  </div>
 
 
@@ -549,7 +549,7 @@
 
   <div id="prn">
     <span style="font-size: 10pt; line-height: normal;">
-      Pseudorandom<br/>Number<br/>Generator
+     Pseudorandom<br/>Number<br/>Generator
     </span>
   </div>
 
@@ -671,10 +671,12 @@
   For example, say $b^\ell$ is consists of 12 samples, each equal to
   unity.  After multiplying with $A^p$ we find:
 
- <div data-file="./octave/Ap.m" 
-      data-start-match="\.\$b\^\\ell\$\."
-      data-end-match="\.\$A\^p\$\.">
- </div>
+  <div data-file="./octave/Ap_cob.m" 
+       data-start-match="\%\.\s\$b\^\\ell\$"
+       data-end-match="\%\.\s\$A\^p\sb\^l\$">
+  </div>
+
+  <pre id="Ap"></pre> 
 
   <div class="pz_note" id="pn_note">
     However, in a CDMA system the signal is "spread" by the __same__
@@ -689,9 +691,9 @@
   In matrix terms, consider now the the all-ones Walsh code $W_1$ of
   length 4, cyclically repeated in a matrix:
 
-  <div data-file="./octave/Aw.m" 
-      data-start-match="\.\$W_1\$\."
-      data-end-match="\.\$W_1\$\.">
+  <div data-file="./octave/Aw_cob.m" 
+      data-start-match="\%\.\s\$W_1\$"
+      data-end-match="\%\.\s\$W_1\$">
   </div>
 
   <pre id="Aw-1"></pre> 
@@ -703,6 +705,8 @@
   step 5 for the first Walsh path, given the 12 samples entering step
   3. If we extend the above matrix with the remaining three Walsh
   codes we have $A^w$:
+
+  <pre id="Aw-2"></pre> 
 
   Applying $A^w$ to our existing system equation, we find 
 
@@ -724,6 +728,13 @@
   compressing a signal, and then finally recovering it from a
   sub-Nyquist number of samples. In Octave:
 
+  <div data-file="./octave/rand_demod.m" 
+      data-start-match="\%\.\snumber\sof\stones\sin\s\$s\(t\)\$"
+      data-end-match="\%\.\sNyquist\s\(\$b\^\\ell\$\)">
+  </div>
+
+
+
   The upper part of the first plot shows the Nyquist samples, $b^\ell=
   A^\ell x$ in blue and the signal after random spreading by $p(t)$
   (i.e., $A^p A^\ell x = A^p b$) in green. The lower part of the first
@@ -731,11 +742,21 @@
   then the compressed values obtained by selecting the first Walsh
   path (in magenta).
 
+  <div style="text-align: center;">
+    <img src="./octave/rand_demod.svg"></img>
+  </div>
+
+
   It remains to recover the original signal from its compressed
   samples.  As ever, the CS problem is encapsulated by an
   underdetermined linear system, $Ax=b$. In place of IRLS, here we use
   the well-known [?id=b004d,$\ell_1$-magic] code, and then plot the
   sparse input coordinates, and the recovered output coordinates.
+
+  <div style="text-align: center;">
+    <img src="./octave/rand_demod_recon.svg"></img>
+  </div>
+
 
   <h2 class="pz_section" id="conclusion" ref="slide_conclusion">
     Conclusion

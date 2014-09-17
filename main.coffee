@@ -13,6 +13,8 @@ $("#Aw-1").text txt
 txt = $blab.resource "./octave/Aw-2.txt"
 $("#Aw-2").text txt
 
+txt = $blab.resource "./octave/Ap.txt"
+$("#Ap").text txt
 
 
 

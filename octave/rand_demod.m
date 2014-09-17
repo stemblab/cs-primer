@@ -1,6 +1,6 @@
 resources
 
-K=5; % number of tones in $s(t)$
+K=5; %. number of tones in $s(t)$
 M=32; % compressed sampling rate
 N=128; % Nyquist sampling rate
 
@@ -35,9 +35,7 @@ x(randperm(N,K))=1; % except for $K$ ones
 % samples
 
 b=A*x;                      % compressed ($b$)
-bs=As*x;                    % Nyquist ($b^\ell$)
-
-%!end (116)
+bs=As*x;                    %. Nyquist ($b^\ell$)
 
 subplot(2,1,1);hold on
 plot(Al*x,'.b-');

@@ -1,20 +1,19 @@
 resources
 
-% $Ax=b$ dimensions...
+% $Ax=b$ dimensions..
 N = 128;  % columns in $A$
 M = 32;   % rows in $A$
 K = 5;    % nonzero elements of $x$ %.
-%%%%%
 
-x = zeros(N,1); % .initialize $x$.
-x(randperm(N,K)) = 1*exp(j*2*pi*rand(1,K)); % .$K$ values. have random phase
+x = zeros(N,1); % Initialize $x$..
+x(randperm(N,K)) = 1*exp(j*2*pi*rand(1,K)); %. $K$ values have random phase
 
-Al = inv(dftmtx(N)); % .COB/iDFT. $A^\ell$
-bl = Al*x; % .Nyquist samples. $b^\ell$
+Al = inv(dftmtx(N)); %. COB/iDFT $A^\ell$
+bl = Al*x; %. Nyquist samples $b^\ell$
 
-samp_idx = randperm(N,M); % .randomly select $M$ rows.
-b = bl(samp_idx); % discard rows: $b^\ell \rightarrow b$
-A = Al(samp_idx,:); % discard rows: .$A^\ell \rightarrow A$.
+samp_idx = randperm(N,M); %. Randomly select $M$ rows.
+b = bl(samp_idx); % Discard rows: $b^\ell \rightarrow b$
+A = Al(samp_idx,:); %. Discard rows: $A^\ell \rightarrow A$.
 
 hold on
 
@@ -36,7 +35,7 @@ legend('real (Nyq)','imag (Nyq)','real (comp)','imag (comp)',-1)
 
 print -dsvg nus_nyq_samp.svg
 
-x2=irls(A,b); % .solve $Ax=b$ with IRLS.
+x2=irls(A,b); %. Solve $Ax=b$ with IRLS.
 
 clf;hold on
 plot(x,'bo')
