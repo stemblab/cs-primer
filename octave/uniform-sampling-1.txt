@@ -1,0 +1,3 @@
+spark_del_1 =  2
+spark_del_2 =  2
+spark_del_3 =  2

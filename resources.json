@@ -1,0 +1,12 @@
+[
+    "./octave/uniform-sampling-1.txt",
+    "./octave/uniform-sampling-2.txt",
+    "./octave/uniform-sampling-3.txt",
+    "./octave/uniform_sampling.m",
+    "./octave/nus.m",
+    "./octave/Ap.m",
+    "main.coffee",
+    "main.css",
+    "slides.html",
+    "main.html"
+]
