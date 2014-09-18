@@ -37,6 +37,10 @@ x(randperm(N,K))=1; % except for $K$ ones
 b=A*x;                      % compressed ($b$)
 bs=As*x;                    %. Nyquist ($b^\ell$)
 
+setenv("GNUTERM", "unknown");
+set (0, 'defaultaxesfontname', 'Arial');
+set (0, 'defaulttextfontname', 'Arial');
+
 subplot(2,1,1);hold on
 plot(Al*x,'.b-');
 c = [0.5, 0.75, 0.5];

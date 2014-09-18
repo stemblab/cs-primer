@@ -15,6 +15,10 @@ samp_idx = randperm(N,M); %. Randomly select $M$ rows.
 b = bl(samp_idx); % Discard rows: $b^\ell \rightarrow b$
 A = Al(samp_idx,:); %. Discard rows: $A^\ell \rightarrow A$.
 
+setenv("GNUTERM", "unknown");
+set (0, 'defaultaxesfontname', 'Arial');
+set (0, 'defaulttextfontname', 'Arial');
+
 hold on
 
 plot(real(bl), '.b-')
@@ -47,6 +51,6 @@ plot(exp(j*linspace(0,2*pi,32)),'.','markersize',3)
 axis(1.1*[-1 1 -1 1])
 grid on
 
-print -dsvg nus.svg
+print nus.svg
 
 

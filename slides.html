@@ -22,555 +22,612 @@
 	</li>
       </ul>
       <span class="pz_text" ref="slide_tips">(Keyboard shortcuts and tips)</span>
+    </div>
+
+    <div class="pz_note" id="slide_tips">
+
+      <div style="font-size: 10pt;">
+	<ul>
+	  <li> *Esc*: Close/open slides window. </li>
+	  <li> *Left/right*: Navigate slides. </li>
+	  <li> *Up/down*: Scroll main page. </li>
+	  <li> *Return*: Go to corresponding section in main page. </li>
+	  <li> Links navigate between slides and main page. </li>
+	  <li> Drag window anywhere on page. </li>
+	</ul>
+      </div>
+    </div>
+
   </div>
 
-<div class="pz_note" id="slide_tips">
-<!--div class="pz_slide_tips"-->
-<div style="font-size: 10pt;">
-* *Esc*: Close/open slides window.
-* *Left/right*: Navigate slides.
-* *Up/down*: Scroll main page.
-* *Return*: Go to corresponding section in main page.
-* Links navigate between slides and main page.
-* Drag window anywhere on page.  
-</div>
-</div>
-</div>
+  <div class="pz_slide" id="slide_introduction" section="introduction">
 
-<!--puzlet_end--> (284)
-
-<div class="pz_slide" id="slide_introduction" section="introduction">
-<div class="pz_slide_heading">
-===Introduction===
-</div>
-<div class="pz_slide_body">
-<img src="./python/uniform_sampling.svg"/>
-* Samples at $t=-1,0,1$.
-* Impossible to distinguish signals with fewer than 3 samples.
-* How can we fix this?
-</div>
-</div>
-
-<!--puzlet_end--> (285)
-
-<div class="pz_slide" id="slide_counter_example_0" 
-    section="counter_example">
-<div class="pz_slide_heading">
-=== Counter Example ===
-<p class="subslide">(Slide 1 of 4)</p>
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Express sparsity basis in Lagrange coordinates.
-* $1 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
-    \color{blue}{1}\\ \color{green}{1}\end{bmatrix}$
-* $t \leftrightarrow \begin{bmatrix}\color{red}{-1} \\ 
-    \color{blue}{0}\\ \color{green}{1}\end{bmatrix}$
-* $t^2 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
-    \color{blue}{0}\\ \color{green}{1}\end{bmatrix}$
-
- 
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/sparsity_basis_0.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (361)
-
-<div class="pz_slide" id="slide_counter_example_1" 
-    section="counter_example">
-<div class="pz_slide_heading">
-===Counter Example===
-<p class="subslide">(Slide 2 of 4)</p>
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Project along $b_1^\ell$
-
-* $1 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
-    \cancel{\color{blue}{1}}\\ \color{green}{1}\end{bmatrix}$
-* $t \leftrightarrow \begin{bmatrix}\color{red}{-1} \\ 
-    \cancel{\color{blue}{0}}\\ \color{green}{1}\end{bmatrix}$
-* $t^2 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
-    \cancel{\color{blue}{0}}\\ \color{green}{1}\end{bmatrix}$
-
-* $\color{blue}{\mathcal{SB}\mathrm{-projections}}$ are not distinct
-
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/sparsity_basis_1.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (342)
-
-<div class="pz_slide" id="slide_counter_example_2" 
-    section="counter_example">
-<div class="pz_slide_heading">
-===Counter Example===
-<p class="subslide">(Slide 3 of 4)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Project along $b_0^\ell$
-* $\color{red}{\mathcal{SB}\mathrm{-projections}}$ are not distinct
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/sparsity_basis_2.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (341)
-
-<div class="pz_slide" id="slide_counter_example_3" 
-    section="counter_example">
-<div class="pz_slide_heading">
-===Counter Example===
-<p class="subslide">(Slide 4 of 4)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Project along $b_2^\ell$ 
-* $\color{green}{\mathcal{SB}\mathrm{-projections}}$ are not distinct
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/sparsity_basis_3.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (304)
-
-<div class="pz_slide" id="slide_remedy_1" section="remedy">
-<div class="pz_slide_heading">
-=== Remedy ===
-<p class="subslide">(Slide 1 of 2)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* CS fails in *all* sensing coordinate planes ...
-* Find <font color="C0C000">new</font> coordinate planes!
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/new_planes_1.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (311)
-
-<div class="pz_slide" id="slide_remedy_2" section="remedy">
-<div class="pz_slide_heading">
-===Remedy===
-<p class="subslide">(Slide 2 of 2)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Orientate along new coordinates
-* new, *distinct* $\mathcal{SB}$-projections
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -70px; margin-left: -140px;">
-<img src="./python/new_planes_2.svg" height="470px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (312)
-
-<div class="pz_slide" id="slide_cob_1" section="change_of_basis">
-<div class="pz_slide_heading">
-===Change of Basis===
-</div>
-<div class="pz_slide_body">
-
-
-* Know coordinates of signal $f(t)$ according to sparsity 
-$\color{magenta}{\mathrm{basis}}$
-$$
-f(t)=x_0
-\color{magenta}{1}+x_1 
-\color{magenta}{t} + x_2 
-\color{magenta}{t^2}
-$$
-
-* Know coordinates of sparsity basis according to Lagrange basis 
-($\color{red}{\mathrm{red}}$,
-$\color{blue}{\mathrm{blue}}$, 
-$\color{green}{\mathrm{green}}$ 
-sampling instants)
-$$
-\begin{align}
-\color{magenta}{1} &\longleftrightarrow 
-    [\color{red}{1}~\color{blue}{1}~\color{green}{1}]^T \nonumber \\
-\color{magenta}{t} &\longleftrightarrow 
-    [\color{red}{-1}~\color{blue}{0}~\color{green}{1}]^T \nonumber \\
-\color{magenta}{t^2} &\longleftrightarrow 
-    [\color{red}{1}~\color{blue}{0}~\color{green}{1}]^T \nonumber
-\end{align}
-$$
-
-* Therefore know coordinates, $b$, of $f(t)$ according to Lagrange basis
-* Bookkeeping via COB matrix
-$$
-\begin{bmatrix}
-\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
-\color{blue}{1} & \color{blue}{0} & \color{blue}{0} \\
-\color{green}{1} & \color{green}{1} & \color{green}{1}
-\end{bmatrix} x =
-\begin{bmatrix}
-f(\color{red}{t_0})\\
-f(\color{blue}{t_1})\\
-f(\color{green}{t_2})
-\end{bmatrix}=b
-$$
-
+    <div class="pz_slide_heading"><h3>Introduction</h3></div>
     
-</div>
-</div>
+    <div class="pz_slide_body">
 
-<!--puzlet_end--> (334)
+      <img src="./python/uniform_sampling.svg"/>
 
-<div class="pz_slide" id="slide_cs_equation_revisited" 
-                                    section="cs_equation_revisited">
-<div class="pz_slide_heading">
-=== CS Equation Revisited ===
-</div>
+      <ul>
+	<li> Samples at $t=-1,0,1$. </li>
+	<li> Impossible to distinguish signals with fewer than 3 samples. </li>
+	<li> How can we fix this? </li>
+      </ul>
+    </div>
 
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* COB equation
+  </div>
 
-$\begin{bmatrix}
-\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
-\color{blue}{1} & \color{blue}{0} & \color{blue}{0} \\
-\color{green}{1} & \color{green}{1} & \color{green}{1}
-\end{bmatrix} x=b^\ell$
+  <div class="pz_slide" id="slide_counter_example_0" 
+       section="counter_example">
 
-* $\mathcal{SB}$-projections $\rightarrow$
+    <div class="pz_slide_heading">
+      <h3>Counter Example</h3>
+      <p class="subslide">(Slide 1 of 4)</p>
+    </div>
 
-$\require{cancel} 
-\begin{bmatrix}
-\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
-\cancel{\color{blue}{1}} & \cancel{\color{blue}{0}} 
-& \cancel{\color{blue}{0}} \\
-\color{green}{1} & \color{green}{1} & \color{green}{1}
-\end{bmatrix}
-$
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
 
-* $Ax=b$ (e.g.,)
-
-$
-\require{cancel}
-\begin{bmatrix}
-\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
-\cancel{\color{blue}{1}} & \cancel{\color{blue}{0}} 
-& \cancel{\color{blue}{0}} \\
-\color{green}{1} & \color{green}{1} & \color{green}{1}
-\end{bmatrix} x=
-\begin{bmatrix}1\\\cancel{0}\\1 \end{bmatrix}
-$
-
-* (No unique solution in this case.)
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: -20px; margin-left: -80px;">
-<img src="./python/sparsity_basis_1.svg" height="420px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (286)
-
-<div class="pz_slide" id="slide_remedy_revisited" 
-    section="remedy_revisited">
-<div class="pz_slide_heading">
-===Remedy Revisited===
-</div>
-
-<div class="pz_slide_body">
-* Core problem:
-$\require{cancel}
-\begin{bmatrix}
-\color{blue}{1}&\color{blue}{-1}&\color{blue}{1}\\ 
-\cancel{1}&\cancel{0}&\cancel{0}\\
-\color{blue}{1}&\color{blue}{1}&\color{blue}{1}
-\end{bmatrix} x=
-\begin{bmatrix}
-1\\ \cancel{0} \\ 1
-\end{bmatrix}
-$
-has two 1-sparse solutions.
-* That is, there are 1-sparse aliases.
-* Because two $\mathcal{SB}$-projections (columns) are not distinct. 
-* Alternatively, because spark = 2 (combination of 2 columns adds to zero)
-* Remedy = COB
-
-$$
-\begin{bmatrix}
-\color{magenta}{\cancel{\cos\theta}}&
-    \color{magenta}{\cancel{-\sin\theta}}&
-    \color{magenta}{\cancel{0}}\\
-\color{magenta}{\sin\theta}&
-    \color{magenta}{\cos\theta}&
-    \color{magenta}{0}\\
-\color{magenta}{0}&
-    \color{magenta}{0}&
-    \color{magenta}{1}
-\end{bmatrix}
-
-\begin{bmatrix}
-\color{blue}{1}&\color{blue}{-1}&\color{blue}{1}\\
-1&0&0\\
-\color{blue}{1}&\color{blue}{1}&\color{blue}{1}
-\end{bmatrix}
-x
-=
-\begin{bmatrix}
-\color{magenta}{\cancel{\cos\theta}}&
-    \color{magenta}{\cancel{-\sin\theta}}&
-    \color{magenta}{\cancel{0}}\\
-\color{magenta}{\sin\theta}&
-    \color{magenta}{\cos\theta}&
-    \color{magenta}{0}\\
-\color{magenta}{0}&
-    \color{magenta}{0}&
-    \color{magenta}{1}
-\end{bmatrix}
-\begin{bmatrix}
-1\\ 0 \\ 1
-\end{bmatrix}
-$$
-
-* Now: No 1-sparse aliases; $\mathcal{SB}$-projections distinct; spark = 3.
+      <ul>
+	<li> Express sparsity basis in Lagrange coordinates. </li>
+	<li> $1 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
+	  \color{blue}{1}\\ \color{green}{1}\end{bmatrix}$ </li>
+	<li> $t \leftrightarrow \begin{bmatrix}\color{red}{-1} \\ 
+	  \color{blue}{0}\\ \color{green}{1}\end{bmatrix}$ </li>
+	<li> $t^2 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
+	  \color{blue}{0}\\ \color{green}{1}\end{bmatrix}$ </li>
+      </ul>
  
-</div>
-</div>
+    </div>
 
-<!--puzlet_end--> (287)
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/sparsity_basis_0.svg" height="470px"/>
+      </div>
+    </div>
 
-<div class="pz_slide" id="slide_dft" section="dft">
-<div class="pz_slide_heading">
-===DFT===
-</div>
+  </div>
 
-<div class="pz_slide_body">
+  <div class="pz_slide" id="slide_counter_example_1" 
+       section="counter_example">
 
-$$g_n = \frac{1}{N} \sum_{k=0}^{N-1} G_k \cdot e^{(i 2 \pi n / N)k}$$
+    <div class="pz_slide_heading">
+      <h3>Counter Example</h3>
+      <p class="subslide">(Slide 2 of 4)</p>
+    </div>
 
-* One signal
-* Two sets of coordinates:
-** "time domain" sample values (Lagrange coordinates)
-** "frequency domain" spectrum (sparse coordinates)
-* Coordinates related by DFT matrix (or inverse)
-* DFT matrix is a COB matrix
-</div>
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+
+      <ul>
+	<li> Project along $b_1^\ell$ </li>
+	<li> $1 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
+	  \cancel{\color{blue}{1}}\\ \color{green}{1}\end{bmatrix}$ </li>
+	<li> $t \leftrightarrow \begin{bmatrix}\color{red}{-1} \\ 
+	\cancel{\color{blue}{0}}\\ \color{green}{1}\end{bmatrix}$ </li>
+	<li> $t^2 \leftrightarrow \begin{bmatrix}\color{red}{1} \\ 
+	  \cancel{\color{blue}{0}}\\ \color{green}{1}\end{bmatrix}$ </li>
+	<li> $\color{blue}{\mathcal{SB}\mathrm{-projections}}$ are not distinct </li>
+      </ul>
+
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/sparsity_basis_1.svg" height="470px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_counter_example_2" 
+       section="counter_example">
+
+    <div class="pz_slide_heading">
+      <h3>Counter Example</h3>
+      <p class="subslide">(Slide 3 of 4)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+      <ul>
+	<li>Project along $b_0^\ell$</li>
+	<li>$\color{red}{\mathcal{SB}\mathrm{-projections}}$ are not distinct</li>
+      </ul>
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/sparsity_basis_2.svg" height="470px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_counter_example_3" 
+       section="counter_example">
+ 
+    <div class="pz_slide_heading">
+      <h3>Counter Example</h3>
+      <p class="subslide">(Slide 4 of 4)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+      <li>Project along $b_2^\ell$ </li>
+      <li>$\color{green}{\mathcal{SB}\mathrm{-projections}}$ are not distinct</li>
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/sparsity_basis_3.svg" height="470px"/>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="pz_slide" id="slide_remedy_1" section="remedy">
+
+    <div class="pz_slide_heading">
+      <h3>Remedy</h3>
+      <p class="subslide">(Slide 1 of 2)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+      <ul>
+	<li>CS fails in *all* sensing coordinate planes ...</li>
+	<li>Find <font color="C0C000">new</font> coordinate planes!</li>
+      </ul>
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/new_planes_1.svg" height="470px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_remedy_2" section="remedy">
+
+    <div class="pz_slide_heading">
+      <h3>Remedy</h3>
+      <p class="subslide">(Slide 2 of 2)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+      <ul>
+	<li>Orientate along new coordinates</li>
+	<li>new, *distinct* $\mathcal{SB}$-projections</li>
+      </ul>
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -70px; margin-left: -140px;">
+	<img src="./python/new_planes_2.svg" height="470px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_cob_1" section="change_of_basis">
+
+    <div class="pz_slide_heading">
+      <h3>Change of Basis</h3>
+    </div>
+
+    <div class="pz_slide_body">
+
+      <ul>
+	<li>
+	  Know coordinates of signal $f(t)$ according to sparsity 
+	  $\color{magenta}{\mathrm{basis}}$
+
+	  $$
+	  f(t)=x_0
+	  \color{magenta}{1}+x_1 
+	  \color{magenta}{t} + x_2 
+	  \color{magenta}{t^2}
+	  $$
+	</li>
+
+	<li>
+	  Know coordinates of sparsity basis according to Lagrange basis 
+	  ($\color{red}{\mathrm{red}}$,
+	  $\color{blue}{\mathrm{blue}}$, 
+	  $\color{green}{\mathrm{green}}$ 
+	  sampling instants)
+
+	  $$
+	  \begin{align}
+	  \color{magenta}{1} &\longleftrightarrow 
+	  [\color{red}{1}~\color{blue}{1}~\color{green}{1}]^T \nonumber \\
+	  \color{magenta}{t} &\longleftrightarrow 
+	  [\color{red}{-1}~\color{blue}{0}~\color{green}{1}]^T \nonumber \\
+	  \color{magenta}{t^2} &\longleftrightarrow 
+	  [\color{red}{1}~\color{blue}{0}~\color{green}{1}]^T \nonumber
+	  \end{align}
+	  $$
+	</li>
+
+	<li>Therefore know coordinates, $b$, of $f(t)$ according to
+	  Lagrange basis</li>
+	
+	<li>
+	  Bookkeeping via COB matrix
+	  $$
+	  \begin{bmatrix}
+	  \color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
+	  \color{blue}{1} & \color{blue}{0} & \color{blue}{0} \\
+	  \color{green}{1} & \color{green}{1} & \color{green}{1}
+	  \end{bmatrix} x =
+	  \begin{bmatrix}
+	  f(\color{red}{t_0})\\
+	  f(\color{blue}{t_1})\\
+	  f(\color{green}{t_2})
+	  \end{bmatrix}=b
+	  $$
+	</li>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_cs_equation_revisited" 
+       section="cs_equation_revisited">
+
+    <div class="pz_slide_heading">
+      <h3>CS Equation Revisited</h3>
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+
+      <ul>
+
+      <li>
+	COB equation
+
+	$\begin{bmatrix}
+	\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
+	\color{blue}{1} & \color{blue}{0} & \color{blue}{0} \\
+	\color{green}{1} & \color{green}{1} & \color{green}{1}
+	\end{bmatrix} x=b^\ell$
+      </li>
+
+      <li>
+	$\mathcal{SB}$-projections $\rightarrow$
+
+	$\require{cancel} 
+	\begin{bmatrix}
+	\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
+	\cancel{\color{blue}{1}} & \cancel{\color{blue}{0}} 
+	& \cancel{\color{blue}{0}} \\
+	\color{green}{1} & \color{green}{1} & \color{green}{1}
+	\end{bmatrix}
+	$
+      </li>
+
+      <li>
+	$Ax=b$ (e.g.,)
+
+	$
+	\require{cancel}
+	\begin{bmatrix}
+	\color{red}{1} & \color{red}{-1} & \color{red}{1} \\  
+	\cancel{\color{blue}{1}} & \cancel{\color{blue}{0}} 
+	& \cancel{\color{blue}{0}} \\
+	\color{green}{1} & \color{green}{1} & \color{green}{1}
+	\end{bmatrix} x=
+	\begin{bmatrix}1\\\cancel{0}\\1 \end{bmatrix}
+	$
+      </li>
+
+      <li>(No unique solution in this case.)</li>
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: -20px; margin-left: -80px;">
+	<img src="./python/sparsity_basis_1.svg" height="420px"/>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="pz_slide" id="slide_remedy_revisited" 
+       section="remedy_revisited">
+
+    <div class="pz_slide_heading">
+      <h3>Remedy Revisited</h3>
+    </div>
+
+    <div class="pz_slide_body">
+      <ul>
+	<li>
+	  Core problem:
+	  $\require{cancel}
+	  \begin{bmatrix}
+	  \color{blue}{1}&\color{blue}{-1}&\color{blue}{1}\\ 
+	  \cancel{1}&\cancel{0}&\cancel{0}\\
+	  \color{blue}{1}&\color{blue}{1}&\color{blue}{1}
+	  \end{bmatrix} x=
+	  \begin{bmatrix}
+	  1\\ \cancel{0} \\ 1
+	  \end{bmatrix}
+	  $
+	  has two 1-sparse solutions.
+	</li>
+	<li>That is, there are 1-sparse aliases.</li>
+	<li>Because two $\mathcal{SB}$-projections (columns) are not distinct. </li>
+	<li>Alternatively, because spark = 2 (combination of 2 columns adds to zero)</li>
+	<li>
+	  Remedy = COB
+
+	  $$
+	  \begin{bmatrix}
+	  \color{magenta}{\cancel{\cos\theta}}&
+	  \color{magenta}{\cancel{-\sin\theta}}&
+	  \color{magenta}{\cancel{0}}\\
+	  \color{magenta}{\sin\theta}&
+	  \color{magenta}{\cos\theta}&
+	  \color{magenta}{0}\\
+	  \color{magenta}{0}&
+	  \color{magenta}{0}&
+	  \color{magenta}{1}
+	  \end{bmatrix}
+
+	  \begin{bmatrix}
+	  \color{blue}{1}&\color{blue}{-1}&\color{blue}{1}\\
+	  1&0&0\\
+	  \color{blue}{1}&\color{blue}{1}&\color{blue}{1}
+	  \end{bmatrix}
+	  x
+	  =
+	  \begin{bmatrix}
+	  \color{magenta}{\cancel{\cos\theta}}&
+	  \color{magenta}{\cancel{-\sin\theta}}&
+	  \color{magenta}{\cancel{0}}\\
+	  \color{magenta}{\sin\theta}&
+	  \color{magenta}{\cos\theta}&
+	  \color{magenta}{0}\\
+	  \color{magenta}{0}&
+	  \color{magenta}{0}&
+	  \color{magenta}{1}
+	  \end{bmatrix}
+	  \begin{bmatrix}
+	  1\\ 0 \\ 1
+	  \end{bmatrix}
+	  $$
+	</li>
+
+	<li> Now: No 1-sparse aliases; $\mathcal{SB}$-projections distinct;
+	  spark = 3.</li>
+     </div>
+ 
+  </div>
+
+  <div class="pz_slide" id="slide_dft" section="dft">
+
+    <div class="pz_slide_heading">
+      <h3>DFT</h3>
+    </div>
+
+    <div class="pz_slide_body">
+
+      $$g_n = \frac{1}{N} \sum_{k=0}^{N-1} G_k \cdot e^{(i 2 \pi n / N)k}$$
+
+      <ul>
+	<li>One signal</li>
+	<li>Two sets of coordinates:
+	  <ul>
+	    <li>"time domain" sample values (Lagrange coordinates)<li>
+	    <li>"frequency domain" spectrum (sparse coordinates)<li>
+	  </ul>
+	</li>
+	<li>Coordinates related by DFT matrix (or inverse)</li>
+	<li>DFT matrix is a COB matrix</li>
+      </ul>
+    </div>
    
-</div>
+  </div>
 
-<!--puzlet_end--> (354)
+  <div class="pz_slide" id="slide_mc_noise" section="mc_noise">
 
-<div class="pz_slide" id="slide_mc_noise" section="mc_noise">
-<div class="pz_slide_heading">
-===  Mutual coherence and noise ===
-</div> 
+    <div class="pz_slide_heading">
+      <h3>Mutual coherence and noise<h3>
+    </div> 
 
-<div class="pz_slide_body">
-* *Do not express one thing in terms of other similar things*
-* E.g., if columns of $A$ ($\mathcal{SB}$-projections) are similar:
-$$
-Ax=
-\begin{bmatrix}
-\cdots & 1.01 & 0.99 & \cdots \\ \cdots & 1 & 1 & \cdots
-\end{bmatrix}x = 
-\begin{bmatrix}\color{blue}{2}\\ \color{blue}{2}\end{bmatrix}
-$$
-$\hspace{2em}$ has sparse solution 
-$x=
-\begin{bmatrix}
-    0 & 
-    \cdots & 0 & 
-    \color{blue}{1} & 
-    \color{blue}{1} & 
-    0 & 
-    \cdots & 
-    0
-\end{bmatrix}^T$
-* *But*
-$$
-Ax=
-\begin{bmatrix}
-\cdots & 1.01 & 0.99 & \cdots \\ \cdots & 1 & 1 & \cdots
-\end{bmatrix}x = 
-\begin{bmatrix}
-\color{red}{2.1}\\
-\color{red}{1.9}
-\end{bmatrix}
-$$
-$\hspace{2em}$ has sparse solution
-$\hspace{3em}x=\begin{bmatrix}
-0 & 
-\cdots & 
-0 & 
-\color{red}{10.95} & 
-\color{red}{-9.05} & 
-0 & 
-\cdots & 
-0 
-\end{bmatrix}^T$
+    <div class="pz_slide_body">
+      
+      <ul>
+	<li> *Do not express one thing in terms of other similar things* </li>
+	<li> E.g., if columns of $A$ ($\mathcal{SB}$-projections) are similar:
+	  $$
+	  Ax=
+	  \begin{bmatrix}
+	  \cdots & 1.01 & 0.99 & \cdots \\ \cdots & 1 & 1 & \cdots
+	  \end{bmatrix}x = 
+	  \begin{bmatrix}\color{blue}{2}\\ \color{blue}{2}\end{bmatrix}
+	  $$
+	  $\hspace{2em}$ has sparse solution 
+	  $x=
+	  \begin{bmatrix}
+	  0 & 
+	  \cdots & 0 & 
+	  \color{blue}{1} & 
+	  \color{blue}{1} & 
+	  0 & 
+	  \cdots & 
+	  0
+	  \end{bmatrix}^T$
+	<li>
+	<li>
+	  *But*
+	  $$
+	  Ax=
+	  \begin{bmatrix}
+	  \cdots & 1.01 & 0.99 & \cdots \\ \cdots & 1 & 1 & \cdots
+	  \end{bmatrix}x = 
+	  \begin{bmatrix}
+	  \color{red}{2.1}\\
+	  \color{red}{1.9}
+	  \end{bmatrix}
+	  $$
+	  $\hspace{2em}$ has sparse solution
+	  $\hspace{3em}x=\begin{bmatrix}
+	  0 & 
+	  \cdots & 
+	  0 & 
+	  \color{red}{10.95} & 
+	  \color{red}{-9.05} & 
+	  0 & 
+	  \cdots & 
+	  0 
+	  \end{bmatrix}^T$
+	</li>
 
-* The solution is not *robust* to noise.
+	<li>The solution is not *robust* to noise.</li>
 
-</div>
+      </ul>
 
-</div>
-
-<!--puzlet_end--> (289)
-
-<div class="pz_slide" id="slide_scale_randomness" 
-section="scale_randomness">
-<div class="pz_slide_heading">
-===Scale and randomness===
-</div>
-<div class="pz_slide_body">
-* CS $\longleftrightarrow$ COB
-* How can we choose good bases for large problems?
-* Randomly!
+    </div>
     
+  </div>
+
+  <div class="pz_slide" id="slide_scale_randomness" 
+       section="scale_randomness">
+
+    <div class="pz_slide_heading">
+      <h3>Scale and randomness<h3>
+    </div>
+    
+    <div class="pz_slide_body">
+      <ul>
+	<li>CS $\longleftrightarrow$ COB</li>
+	<li>How can we choose good bases for large problems?</li>
+	<li> Randomly!</li>
+      </ul>
+    </div>
+  
+  </div>
+
+  <div class="pz_slide" id="slide_examples_1" section="examples">
+
+    <div class="pz_slide_heading">
+      <h3>Examples</h3>
+      <p class="subslide">(Slide 1 of 3)</p>  
+    </div>
+
+    <div class="pz_slide_body">
+
+      <ul>
+	<li>Nonuniform sampler</li>
+	<li>Random Demodulator</li>
+      </ul>
+
+    </div>
+    
+  </div>
+
+  <div class="pz_slide" id="slide_examples_2" 
+       section="nonuniform_sampler">
+
+    <div class="pz_slide_heading">
+      <h3>Examples: Nonuniform Sampler</h3>
+      <p class="subslide">(Slide 2 of 3)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+      <ul>
+	<li>Random sampling of radio-frequency (RF) waveforms</li>
+	<li>Analog sample-and-hold </li>
+	<li>Convert randomly held values to digital</li>
+	<li>CS matrix equivalent to DFT matrix with randomly chosen rows</li>
+      </ul>
+
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: 0px; margin-left: -20px;">
+	<img src="./octave/nus.svg" height="350px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_examples_3" 
+       section="random_demodulator">
+
+    <div class="pz_slide_heading">
+      <h3>Examples: Random Demodulator</h3>
+      <p class="subslide">(Slide 3 of 3)</p>  
+    </div>
+
+    <div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
+
+      <ul>
+	<li>Similar to CDMA receiver
+	  <ul>
+	    <li> "despread" with pseudo-noise (PN) sequence </li>
+	    <li> "cover" with Walsh codes </li>
+	  </ul>
+	</li>
+	<li>CS matrix is product of COB matrices, starting with DFT.</li>
+      </ul>
+
+    </div>
+
+    <div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
+      <div style="margin-top: 0px; margin-left: -20px;">
+	<img src="./octave/rand_demod_recon.svg" height="350px"/>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="slide_conclusion" 
+       section="conclusion">
+
+    <div class="pz_slide_heading">
+      <h3>Conclusion</h3>
+    </div>
+
+    <div class="pz_slide_body" style="margin-top:-20px;">
+
+      <ul>
+	<li> Bridge to CS technical literature </li>
+	<li> Foundation is change of basis (COB) </li>
+	<li> Sparsity in one basis </li>
+	<li> Redundancy in another </li>
+	<li> Applications can be succinctly represented in COB form </li>
+	<li> As ever, noise and robustness must be considered </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="pz_slide" id="references">
+
+    <div class="pz_slide_heading">
+      <h3>References</h3>
+    </div>
+
+    <ol class="bib">
+
+      <li> Michael Wakin, Stephen Becker, Eric Nakamura, Michael
+      Grant, Emilio Sovero, Daniel Ching, Juhwan Yoo, Justin Romberg,
+      Azita Emami-Neyestanak, and Emmanuel Candès,
+      "[http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6316045&isnumber=6374660,
+      A Nonuniform Sampler for Wideband Spectrally-Sparse
+      Environments,]" IEEE Journal on Emerging and Selected Topics in
+      Circuits and Systems, vol.2, no.3, pp.516-529, Sept. 2012.</li>
+
+      <li>Tropp, J.A., Laska, J.N., Duarte, M.F., Romberg, J.K.,
+      Baraniuk, R.G.,
+      "[http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5361485&isnumber=5361455
+      ,Beyond Nyquist: Efficient Sampling of Sparse Bandlimited
+      Signals]," IEEE Transactions on Information Theory, vol.56,
+      no.1, pp.520-544, Jan. 2010.</li>
+
+    </ol>
+
+  </div>
+  
 </div>
-</div>
-
-<!--puzlet_end--> (293)
-
-<div class="pz_slide" id="slide_examples_1" section="examples">
-<div class="pz_slide_heading">
-===Examples===
-<p class="subslide">(Slide 1 of 3)</p>  
-</div>
-<div class="pz_slide_body">
-* Nonuniform sampler
-* Random Demodulator
-
-</div>
-</div>
-
-<!--puzlet_end--> (359)
-
-<div class="pz_slide" id="slide_examples_2" 
-section="nonuniform_sampler">
-<div class="pz_slide_heading">
-===Examples: Nonuniform Sampler===
-<p class="subslide">(Slide 2 of 3)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Random sampling of radio-frequency (RF) waveforms
-* Analog sample-and-hold 
-* Convert randomly held values to digital
-* CS matrix equivalent to DFT matrix with randomly chosen rows
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: 0px; margin-left: -20px;">
-<img src="./octave/nus.svg" height="350px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (294)
-
-<div class="pz_slide" id="slide_examples_3" 
-section="random_demodulator">
-<div class="pz_slide_heading">
-===Examples: Random Demodulator===
-<p class="subslide">(Slide 3 of 3)</p>  
-</div>
-
-<div class="pz_slide_left_panel_one_third" style="padding-top: 0px">
-* Similar to CDMA receiver
-** "despread" with pseudo-noise (PN) sequence
-** "cover" with Walsh codes
-* CS matrix is product of COB matrices, starting with DFT.
-</div>
-
-<div class="pz_slide_right_panel_two_thirds" style="padding-top: 0px;">
-<div style="margin-top: 0px; margin-left: -20px;">
-<img src="./octave/rand_demod_recon.svg" height="350px"/>
-</div>
-</div>
-
-</div>
-
-<!--puzlet_end--> (360)
-
-<div class="pz_slide" id="slide_conclusion" 
-section="conclusion">
-<div class="pz_slide_heading">
-===Conclusion===
-</div>
-
-<div class="pz_slide_body" style="margin-top:-20px;">
-
-* Bridge to CS technical literature
-* Foundation is change of basis (COB)
-* Sparsity in one basis
-* Redundancy in another
-* Applications can be succinctly represented in COB form
-* As ever, noise and robustness must be considered
-
-</div>
-</div>
-
-<!--puzlet_end--> (355)
-
-<div class="pz_slide" id="references">
-<div class="pz_slide_heading">
-===References===
-</div>
-
-<ol class="bib">
-
-1. Michael Wakin, Stephen Becker, Eric Nakamura, Michael Grant, 
-Emilio Sovero, Daniel Ching, Juhwan Yoo, Justin Romberg, 
-Azita Emami-Neyestanak, and Emmanuel Candès, 
-"[http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6316045&isnumber=6374660,
-A Nonuniform Sampler for Wideband Spectrally-Sparse Environments,]" 
-IEEE Journal on Emerging and Selected Topics in Circuits and Systems,
-vol.2, no.3, pp.516-529, Sept. 2012.
-
-1. Tropp, J.A., Laska, J.N., Duarte, M.F., 
-Romberg, J.K., Baraniuk, R.G., 
-"[http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5361485&isnumber=5361455
-,Beyond Nyquist: Efficient Sampling of Sparse Bandlimited Signals]," 
-IEEE Transactions on Information Theory, vol.56, no.1, pp.520-544, 
-Jan. 2010.
-
-</ol>
-
-</div>
-
-<!--puzlet_end--> (297)
 
