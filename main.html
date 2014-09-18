@@ -20,7 +20,7 @@
   </div>
 
   <div style="text-align: center;">
-    <img src="./python/uniform_sampling.svg"></img>
+    <img src="./py/uniform_sampling.svg"></img>
   </div>
   
   <span class="pz_slide_link" ref="slide_toc">This module </span>
@@ -33,7 +33,7 @@
 
   <h2 class="pz_section" id="remedy" ref="slide_remedy_1">Remedy</h2>
 
-  <pzthumb src="./python/new_planes_1.svg" ref="slide_remedy_1"/>
+  <pzthumb src="./py/new_planes_1.svg" ref="slide_remedy_1"/>
 
   The core problem identified by the counter-example is the Lagrange
   sensing basis.  <span class="pz_slide_link"
@@ -116,7 +116,7 @@
   <h2 class="pz_section" id="cs_equation_revisited" 
       ref="slide_cs_equation_revisited">CS Equation---Revisited</h2>
  
-  <pzthumb src="./python/sparsity_basis_1.svg" ref="slide_cs_equation_revisited"/>
+  <pzthumb src="./py/sparsity_basis_1.svg" ref="slide_cs_equation_revisited"/>
 
   Plotting the <span class="pz_slide_link"
     ref="slide_counter_example_0"> sparsity basis signals according to
@@ -196,7 +196,7 @@
   To confirm this, consider computing $\mathrm{spark}(A)$---forming
   $A$ by deleting each row of $A^\ell$ in turn:
 
-  <div data-file="./octave/uniform_sampling.m"
+  <div data-file="./m/uniform_sampling.m"
        data-start-match="\$A\^\\ell\$\.\." 
        data-end-match="\.\$\\spark\{1\&-1\&1\\\\1\&0\&0\}\$\.">
   </div>
@@ -231,7 +231,7 @@
   can be formed by dropping rows from $A^n$ and $b^n$, which we can
   check by checking the spark:
 
-  <div data-file="./octave/uniform_sampling.m"
+  <div data-file="./m/uniform_sampling.m"
        data-start-match="\$\\theta\$\.\."
        data-end-match="spark_del_3.*\%\.">
   </div>
@@ -248,7 +248,7 @@
   __linear combination__ of the Lagrange coordinates.  For example,
   consider $R$ above:
 
-  <div data-file="./octave/uniform_sampling.m"
+  <div data-file="./m/uniform_sampling.m"
        data-start-match="\$R\$\.\."
        data-end-match="\$R\$\.\.">
   </div>
@@ -270,7 +270,7 @@
 
   <h2 class="pz_section" id="dft" ref="slide_dft">Discrete Fourier Transform</h2>
 
-  <pzthumb src="./python/dft_eqn.svg" ref="slide_dft"/>
+  <pzthumb src="./py/dft_eqn.svg" ref="slide_dft"/>
 
   So far we have studied CS in terms of polynomials and changes of
   basis.  While simple, these
@@ -401,7 +401,7 @@
     Nonuniform Sampler
   </h3>
 
-  <pzthumb src="./octave/nus.svg" ref="slide_examples_2"/>
+  <pzthumb src="./m/nus.svg" ref="slide_examples_2"/>
 
   Consider a (large) DFT described in COB form as $A^\ell x = b^\ell$.
   We know a solvable CS equation may be found by deleting selected
@@ -462,7 +462,7 @@
     power.
   </div>
 
- <div data-file="./octave/nus.m" 
+ <div data-file="./m/nus.m" 
       data-start-match="\$Ax\=b\$ dimensions\.\."
       data-end-match="K = 5\;.*\%\.">
  </div>
@@ -479,7 +479,7 @@
     the presentation easier.
   </div>
 
- <div data-file="./octave/nus.m" 
+ <div data-file="./m/nus.m" 
       data-start-match="\%\sInitialize\s\$x\$\.\."
       data-end-match="\%\.\s\$K\$">
  </div>
@@ -487,7 +487,7 @@
   The COB matrix, $A^\ell$ is an inverse DFT matrix with $N$ rows and
   columns.  The Nyquist-rate samples are $b^\ell=A^\ell x$:
 
- <div data-file="./octave/nus.m" 
+ <div data-file="./m/nus.m" 
       data-start-match="\%\.\sCOB/iDFT\s\$A\^\\ell\$"
       data-end-match="\%\.\sNyquist\ssamples\s\$b\^\\ell\$">
  </div>
@@ -496,7 +496,7 @@
   rows, and, for reconstruction later, we form matrix $A$ from the
   corresponding rows of $A^\ell$:
 
- <div data-file="./octave/nus.m" 
+ <div data-file="./m/nus.m" 
       data-start-match="\%\.\sRandomly\sselect\s\$M\$\srows\."
       data-end-match="\%\.\sDiscard\srows\:\s\$A\^\\ell\s\\rightarrow\sA\$\."> 
  </div>
@@ -504,13 +504,13 @@
   The plot below shows the Nyquist rate samples (dots) and the
   randomly selected compressed samples (circles).
 
-  <img src="./octave/nus_nyq_samp.svg"></img>
+  <img src="./m/nus_nyq_samp.svg"></img>
 
   Finally, given the $M$ samples of $b$, we are left to solve $Ax=b$
   to recover the original signal (i.e., sparsity coordinates $x$).  We
   use the [?id=b007h,Iteratively Reweighted Least Squares] method:
 
- <div data-file="./octave/nus.m" 
+ <div data-file="./m/nus.m" 
       data-start-match="\%\.\sSolve\s\$Ax\=b\$\swith\sIRLS\."
       data-end-match="\%\.\sSolve\s\$Ax\=b\$\swith\sIRLS\.">
  </div>
@@ -522,7 +522,7 @@
   points at the origin correspond to the tones with zero amplitude
   (or, more realistically, very small amplitude).
 
-  <img src="./octave/nus.svg"></img>
+  <img src="./m/nus.svg"></img>
 
   <h3 class="pz_section" id="random_demodulator" ref="slide_examples_3">
     Random Demodulator
@@ -671,7 +671,7 @@
   For example, say $b^\ell$ is consists of 12 samples, each equal to
   unity.  After multiplying with $A^p$ we find:
 
-  <div data-file="./octave/Ap_cob.m" 
+  <div data-file="./m/Ap_cob.m" 
        data-start-match="\%\.\s\$b\^\\ell\$"
        data-end-match="\%\.\s\$A\^p\sb\^l\$">
   </div>
@@ -691,7 +691,7 @@
   In matrix terms, consider now the the all-ones Walsh code $W_1$ of
   length 4, cyclically repeated in a matrix:
 
-  <div data-file="./octave/Aw_cob.m" 
+  <div data-file="./m/Aw_cob.m" 
       data-start-match="\%\.\s\$W_1\$"
       data-end-match="\%\.\s\$W_1\$">
   </div>
@@ -728,7 +728,7 @@
   compressing a signal, and then finally recovering it from a
   sub-Nyquist number of samples. In Octave:
 
-  <div data-file="./octave/rand_demod.m" 
+  <div data-file="./m/rand_demod.m" 
       data-start-match="\%\.\snumber\sof\stones\sin\s\$s\(t\)\$"
       data-end-match="\%\.\sNyquist\s\(\$b\^\\ell\$\)">
   </div>
@@ -743,7 +743,7 @@
   path (in magenta).
 
   <div style="text-align: center;">
-    <img src="./octave/rand_demod.svg"></img>
+    <img src="./m/rand_demod.svg"></img>
   </div>
 
 
@@ -754,7 +754,7 @@
   sparse input coordinates, and the recovered output coordinates.
 
   <div style="text-align: center;">
-    <img src="./octave/rand_demod_recon.svg"></img>
+    <img src="./m/rand_demod_recon.svg"></img>
   </div>
 
 
