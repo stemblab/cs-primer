@@ -10,7 +10,8 @@ N=128; % Nyquist sampling rate
 Al=sin((pi/N)*[1:N]'*[1:N]); % COB matrix: $A^\ell$
 
 % Code for the "chipping" matrix $A^p$ and the "Walsh" matrix $A^w$ is
-% imported from <a href="?id=b007g#functions">Reproducing "Beyond Nyquist..."</a>
+% imported from <a
+% href="http://stemblab.github.io/beyond-nyquist">Reproducing "Beyond Nyquist..."</a>
 
 Ap=chipping_matrix(N);
 
