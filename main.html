@@ -16,7 +16,7 @@
     Coefficients $x_0$, $x_1$ and $x_2$ can be any non-zero values.
     The sampling instants </br> ($t=-1$, $t=0$ and $t=1$) are
     fixed. Note that the third sampling instant has changed from
-    [?id=b007z.47, Intuitive Compressed Sensing].
+    [http://stemblab.github.io/intuitive-cs, Intuitive Compressed Sensing].
   </div>
 
   <div style="text-align: center;">
@@ -338,13 +338,14 @@
   [http://en.wikipedia.org/wiki/Condition_number,condition number] of
   a linear system, and we cannot escape it in CS.  Since CS systems
   are not square we cannot compute a condition number, but the idea of
-  [?id=cb006p.49,mutual coherence] (MC) serves as similar role.  The
-  MC of a set of $\mathcal{SB}$-projections is the cosine of the
-  minimum angle between any two $\mathcal{SB}$-projections.  In matrix
-  terms, the cosine of the minimum angle between any two columns of
-  $A$.  In the next section, the last before we consider applications,
-  we consider how matrix $A$ can effectively be formed in
-  real-world-scale problems.
+  [http://stemblab.github.io/mutual-coherence ,mutual coherence] (MC)
+  serves as similar role.  The MC of a set of
+  $\mathcal{SB}$-projections is the cosine of the minimum angle
+  between any two $\mathcal{SB}$-projections.  In matrix terms, the
+  cosine of the minimum angle between any two columns of $A$.  In the
+  next section, the last before we consider applications, we consider
+  how matrix $A$ can effectively be formed in real-world-scale
+  problems.
 
   <h2 class="pz_section" id="scale_randomness" ref="slide_scale_randomness">
     Scale & Randomness
@@ -508,7 +509,8 @@
 
   Finally, given the $M$ samples of $b$, we are left to solve $Ax=b$
   to recover the original signal (i.e., sparsity coordinates $x$).  We
-  use the [?id=b007h,Iteratively Reweighted Least Squares] method:
+  use the [http://stemblab.github.io/irls ,Iteratively Reweighted
+  Least Squares] method:
 
  <div data-file="./m/nus.m" 
       data-start-match="\%\.\sSolve\s\$Ax\=b\$\swith\sIRLS\."
@@ -535,9 +537,7 @@
   main difference with our treatment is the COB perspective, which
   links <span class="pz_slide_link"
   ref="references">&#91;2&#93;</span> with our discussion above, and
-  with [?id=b007z.43,CS1].  Further details (including code and
-  computation) can be found in [?id=b007g,another module], but the
-  basic system is shown below.
+  with [http://stemblab.github.io/intuitive-cs,CS1].
 
   <div class="pz_note" id="cdma_note">
     As below, a basic
@@ -639,7 +639,8 @@
     In computations we will actually use a discrete __sine__
     transform, DST (but leave code for the DFT commented).  With the
     DST the computation is entirely real, and we can demonstrate the
-    well-known [?id=b004d,$\ell_1$-magic] code.
+    well-known
+    [http://stemblab.github.io/l1-magic-ports,$\ell_1$-magic] code.
   </div>
 
   Our goal is to represent $f(t)$ with $M=N/R$ samples. Obviously we
@@ -750,8 +751,10 @@
   It remains to recover the original signal from its compressed
   samples.  As ever, the CS problem is encapsulated by an
   underdetermined linear system, $Ax=b$. In place of IRLS, here we use
-  the well-known [?id=b004d,$\ell_1$-magic] code, and then plot the
-  sparse input coordinates, and the recovered output coordinates.
+  the well-known
+  [http://stemblab.github.io/l1-magic-ports,$\ell_1$-magic] code, and
+  then plot the sparse input coordinates, and the recovered output
+  coordinates.
 
   <div style="text-align: center;">
     <img src="./m/rand_demod_recon.svg"></img>
